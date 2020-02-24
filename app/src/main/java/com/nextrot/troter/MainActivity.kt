@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity(), BottomSheetActivity {
         initActionBar()
         initBanners()
         initContents()
-        initAdView()
+//        initAdView()
     }
 
     private fun initActionBar() {
@@ -189,6 +189,7 @@ class MainActivity : AppCompatActivity(), BottomSheetActivity {
     /**
      * 액티비티가 늘어나면 클래스로 분리하여 호출
      * 참고: https://github.com/googleads/googleads-mobile-android-examples/tree/master/kotlin/admob/AdaptiveBannerExample */
+
     private lateinit var adView: AdView
     private var initialLayoutComplete = false
     private val adSize: AdSize
@@ -233,17 +234,17 @@ class MainActivity : AppCompatActivity(), BottomSheetActivity {
 
     // TODO: lifecycle 바인딩 시킬 수 있는 지 확인
     public override fun onPause() {
-        adView.pause()
+//        adView.pause()
         super.onPause()
     }
 
     public override fun onResume() {
         super.onResume()
-        adView.resume()
+//        adView.resume()
     }
 
     public override fun onDestroy() {
-        adView.destroy()
+//        adView.destroy()
         super.onDestroy()
     }
 
